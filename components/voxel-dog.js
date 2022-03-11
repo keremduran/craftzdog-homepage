@@ -14,13 +14,21 @@ const VoxelDog = () => {
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
   const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
+  // const [initialCameraPosition] = useState(
+  //   new THREE.Vector3(
+  //     40 * Math.sin(0.2 * Math.PI),
+  //     20,
+  //     40 * Math.cos(0.2 * Math.PI)
+  //   )
+  // )
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
-      20 * Math.sin(0.2 * Math.PI),
-      10,
-      20 * Math.cos(0.2 * Math.PI)
+      40 * Math.sin(0.2 * Math.PI),
+      20,
+      40 * Math.cos(0.2 * Math.PI)
     )
   )
+
   const [scene] = useState(new THREE.Scene())
   const [_controls, setControls] = useState()
 
@@ -50,10 +58,11 @@ const VoxelDog = () => {
       renderer.outputEncoding = THREE.sRGBEncoding
       container.appendChild(renderer.domElement)
       setRenderer(renderer)
-
+      console.log(scH + ' | ' + scW)
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.005 + 4.8
+      const scale = scW * 0.005 + 4.8
+
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -65,7 +74,8 @@ const VoxelDog = () => {
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
       setCamera(camera)
-
+      console.log(scale)
+      console.log(camera)
       const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
       scene.add(ambientLight)
 
@@ -74,7 +84,7 @@ const VoxelDog = () => {
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, '/dog.glb', {
+      loadGLTFModel(scene, '/castle.glb', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {

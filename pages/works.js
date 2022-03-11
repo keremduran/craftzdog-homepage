@@ -4,6 +4,8 @@ import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import thumbDoctorDemo from '../public/images/links/doctordemo.png'
+import thumbInspireDigital from '../public/images/links/inspiredigital.png'
 import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
 import thumbFourPainters from '../public/images/works/the-four-painters_eyecatch.jpg'
 import thumbMenkiki from '../public/images/works/menkiki_eyecatch.png'

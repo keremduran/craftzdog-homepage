@@ -11,14 +11,16 @@ import {
   useColorModeValue,
   chakra
 } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import thumbYouTube from '../public/images/links/youtube.png'
+import thumbInspireDigital from '../public/images/links/inspiredigital.png'
+import thumbDoctorDemo from '../public/images/links/doctordemo.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import Image from 'next/image'
 
@@ -36,15 +38,15 @@ const Home = () => (
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Hello, I&apos;m a full-stack developer based in Japan!
+        Hello👋, I&apos;m a full-stack developer based in Toronto!
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Kerem Duran
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>Software Developer ( Engineer / Developer / Translator)</p>
         </Box>
         <Box
           flexShrink={0}
@@ -60,12 +62,12 @@ const Home = () => (
             h="100px"
             display="inline-block"
             borderRadius="full"
-            overflow='hidden'
+            overflow="hidden"
           >
             <ProfileImage
-              src="/images/takuya.jpg"
+              src="/images/kerem1.jpg"
               alt="Profile image"
-              borderRadius='full'
+              borderRadius="full"
               width="100%"
               height="100%"
             />
@@ -75,23 +77,28 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          About Me
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <NextLink href="/works/inkdrop" scroll={false}>
-            <Link>Inkdrop</Link>
-          </NextLink>
-          .
+          Welcome to my castle! Thank you for your time and interest in getting
+          to know me. Born into a family of humanitarian activists who were the
+          founding members establishing Lambda Istanbul (former official LGBT
+          Community of Turkey), I&apos;ve naturally gravitated towards similar
+          sentiments, and helped Refugees and Immigrants to settle in Toronto
+          since 2017. Recently, I made the decision to fully transition to
+          Software Engineering, since my heart is in Mathematics and an
+          Engineering. I chose to start with web technologies, because I know
+          that it could be a reliable voice for people who have a passion.
+          Currently, I&apos;m working to establish our family business,{' '}
+          <Link href="https://inspiredigital.vercel.app/" isExternal>
+            InspireDigital
+          </Link>
+          , providing primarily Turkish doctors with Full-Stack websites and
+          also content!
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works" scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
               My portfolio
             </Button>
           </NextLink>
@@ -103,113 +110,104 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>Jun, 1994</BioYear>
+          Born in Istanbul, Turkey.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
+          <BioYear>Sep, 2013</BioYear>
+          Started Mathematical Engineering Program in Istanbul Technical
+          University
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
+          <BioYear>Jun, 2016</BioYear>
+          Worked as a Web Developer Intern at Doktorsitesi.com in Turkey,
+          Istanbul (Platform for Turkish Doctors)
         </BioSection>
         <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Works as a freelance
+          <BioYear>Aug, 2017</BioYear>
+          Moved to Toronto, and began my work with Refugees and Immigrants right
+          away.
+        </BioSection>
+        <BioSection>
+          <BioYear>Sep, 2019</BioYear>
+          Started Software Engineering Technician Program in Centennial College.
         </BioSection>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          I ♥
+          In my free time
         </Heading>
-        <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
-        </Paragraph>
+        <Paragraph>Traveller, Music Maker, Zen Buddhist</Paragraph>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          On the web
+          You can find me at
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/keremduran" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
               >
-                @craftzdog
+                @keremduran
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link
+              href="https://www.linkedin.com/in/kerem-duran/"
+              target="_blank"
+            >
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
+                leftIcon={<IoLogoLinkedin />}
               >
-                @inkdrop_app (English)
+                @kerem-duran
               </Button>
             </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
+            <ListItem>
+              <Link
+                href="https://www.linkedin.com/in/kerem-duran/"
+                target="_blank"
               >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<EmailIcon />}
+                >
+                  @keremduran@live.com
+                </Button>
+              </Link>
+            </ListItem>
           </ListItem>
         </List>
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
+            href="https://inspiredigital.vercel.app/"
+            title="Inspire Digital"
+            thumbnail={thumbInspireDigital}
           >
-            My YouTube channel
+            A simple landing site for our family business.
           </GridItem>
           <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
+            href="https://doktorwebsite-demo-next.vercel.app/"
+            title="Doctor Landing & Blog"
+            height={20}
+            thumbnail={thumbDoctorDemo}
           >
-            A Markdown note-taking app
+            A demo website for doctors, comes with dato CMS.
           </GridItem>
         </SimpleGrid>
 
         <Box align="center" my={4}>
           <NextLink href="/posts" scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="pink">
               Popular posts
             </Button>
           </NextLink>

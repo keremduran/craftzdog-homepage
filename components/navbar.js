@@ -44,8 +44,8 @@ const Navbar = props => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
-      css={{ backdropFilter: 'blur(10px)' }}
+      bg={useColorModeValue('#ffffff40', '#0c1e3b80')}
+      css={{ backdropFilter: 'blur(10px)', transform: 'rotatex(10deg)' }}
       zIndex={1}
       {...props}
     >
