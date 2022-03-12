@@ -4,14 +4,13 @@ import {
   Link,
   List,
   ListItem,
-  SimpleGrid,
   UnorderedList,
   Heading,
   Center
 } from '@chakra-ui/react'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
+import { Title, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 
 const Work = () => (
@@ -23,10 +22,9 @@ const Work = () => (
       <P>
         This is a simple initial landing site for our family business. We aim to
         combine content, design, and product development at one source. This
-        project is still in development, but we have already established contact
-        with many potential clients, through my mother's business providing
-        content to Turkish doctors, which has been ongoing for more than a
-        decade.
+        project is still in development, it will be an addition to my
+        family&apos;s ongoing business providing content to Turkish doctors for
+        more than a decade.
       </P>
       <List ml={4} my={4}>
         <ListItem>
