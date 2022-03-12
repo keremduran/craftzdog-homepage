@@ -20,10 +20,10 @@ const Work = () => (
         Oddrush <Badge>2018 - 2019</Badge>
       </Title>
       <P>
-        Between December 2018 and June 2019 I worked as a casino dealer. There,
-        I thought it would be a good idea to make a tool for myself and other
-        dealers to practice unfamiliar payouts before we actually start dealing,
-        because minor mistakes can lead to hundreds of dollars of loss, it could
+        Between December 2018 and June 2019 I worked as a casino dealer. During
+        my work there, I thought it would be a good idea to make a tool for
+        myself and other dealers to practice unfamiliar payouts, because minor
+        mistakes in casino can lead to hundreds of dollars of loss, which could
         raise some questions about our credibility as a dealer. This tool has
         been used by new hires, trainers, and my dealer co-workers who were
         required to deal new games.
