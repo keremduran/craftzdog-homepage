@@ -184,32 +184,28 @@ const Home = () => (
             </ListItem>
           </ListItem>
         </List>
-
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://inspiredigital.vercel.app/"
-            title="Inspire Digital"
-            thumbnail={thumbInspireDigital}
-          >
-            A simple landing site for our family business.
-          </GridItem>
-          <GridItem
-            href="https://doktorwebsite-demo-next.vercel.app/"
-            title="Doctor Landing & Blog"
-            height={20}
-            thumbnail={thumbDoctorDemo}
-          >
-            A demo website for doctors, comes with dato CMS.
-          </GridItem>
-        </SimpleGrid>
-
-        <Box align="center" my={4}>
-          <NextLink href="/posts" scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="pink">
-              Popular posts
-            </Button>
-          </NextLink>
-        </Box>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            Some recent work
+          </Heading>
+          <SimpleGrid columns={[1, 2, 2]} gap={6}>
+            <GridItem
+              href="https://inspiredigital.vercel.app/"
+              title="Inspire Digital"
+              thumbnail={thumbInspireDigital}
+            >
+              A simple landing site for our family business.
+            </GridItem>
+            <GridItem
+              href="https://doktorwebsite-demo-next.vercel.app/"
+              title="Doctor Landing & Blog"
+              height={20}
+              thumbnail={thumbDoctorDemo}
+            >
+              A demo website for doctors, comes with dato CMS.
+            </GridItem>
+          </SimpleGrid>
+        </Section>
       </Section>
     </Container>
   </Layout>
