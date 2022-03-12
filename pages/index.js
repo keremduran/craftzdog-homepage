@@ -123,8 +123,8 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>Aug, 2017</BioYear>
-          Moved to Toronto, and began my work with Refugees and Immigrants right
-          away.
+          Arrived at Toronto, and began my work with Refugees and Immigrants the
+          same day.
         </BioSection>
         <BioSection>
           <BioYear>Sep, 2019</BioYear>
