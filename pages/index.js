@@ -18,10 +18,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInspireDigital from '../public/images/links/inspiredigital.png'
 import thumbDoctorDemo from '../public/images/links/doctordemo.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -80,8 +78,8 @@ const Home = () => (
           About Me
         </Heading>
         <Paragraph>
-          Welcome to my castle! Thank you for your time and interest in getting
-          to know me. Born into a family of humanitarian activists who were the
+          Welcome to my hive! Thank you for your time and interest in getting to
+          know me. Born into a family of humanitarian activists who were the
           founding members establishing Lambda Istanbul (former official LGBT
           Community of Turkey), I&apos;ve naturally gravitated towards similar
           sentiments, and helped Refugees and Immigrants to settle in Toronto
