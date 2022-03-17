@@ -5,6 +5,7 @@ import { WorkGridItem } from '../components/grid-item'
 
 import thumbDoctorDemo from '../public/images/links/doctordemo.png'
 import thumbRealEstate from '../public/images/links/realestate.png'
+import thumbToyshopRedesign from '../public/images/links/toyshopredesign.png'
 import thumbNextPokedex from '../public/images/links/nextpokedex.png'
 import thumbCalculator from '../public/images/links/calculator.png'
 import thumbInspireDigital from '../public/images/links/inspiredigital.png'
@@ -36,10 +37,20 @@ const Works = () => (
             Demo website we presented to our potential clients.
           </WorkGridItem>
         </Section>
+        <Section>
+          <WorkGridItem
+            id="toyshopredesign"
+            title="Toyshop Redesign"
+            thumbnail={thumbToyshopRedesign}
+          >
+            One of my first complete projects, based on extensive design
+            documentation and wireframes.
+          </WorkGridItem>
+        </Section>
         <Section delay={0.2}>
           <WorkGridItem id="oddrush" title="Oddrush" thumbnail={thumbOddrush}>
-            A practice game I developed while working as a casino dealer, for
-            new hires to practice payouts.
+            A game I developed during my journey as a casino dealer, for casino
+            dealers.
           </WorkGridItem>
         </Section>
         <Section delay={0.2}>
