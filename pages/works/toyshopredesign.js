@@ -20,12 +20,12 @@ const Work = () => (
         Toyshop Redesign <Badge>2018</Badge>
       </Title>
       <P>
-        A redesign project for Treasure Island Toys website (which used to not
-        look as good) we made in collaboration with my good friend, Senior UX
+        One of my first full projects, a redesign for Treasure Island Toys
+        website we made in collaboration with my good friend, Senior UX
         Designer, Yayi Liu, who provided me with the wonderful wireframe designs
         for me to develop this fully responsive website from scratch with pure
-        HTML, CSS and JS. You can view the wireframes and detailed project
-        design breakdown in her{' '}
+        HTML, CSS and JS. You can view the breakdown of the extensive project
+        design in her{' '}
         <Link
           isExternal
           href="http://www.yayiliu.com/portfolio/toyshop-web-redesign/"
@@ -55,7 +55,7 @@ const Work = () => (
             href="https://github.com/keremduran/keremduran.github.io/tree/master/ToyShopResponsive"
           >
             <Badge mr={2}>Repo</Badge>
-            Github
+            Github <i>(I was just figuring out Github :) )</i>
             <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
@@ -70,7 +70,7 @@ const Work = () => (
           </Link>
         </ListItem>
         <Heading as="h5" fontSize={14} mt={6} mb={2}>
-          Credits to Yayi
+          More from Yayi!
         </Heading>
         <ListItem>
           <Link isExternal href="http://www.yayiliu.com/">
