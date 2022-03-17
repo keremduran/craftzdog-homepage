@@ -14,10 +14,10 @@ import { Title, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 
 const Work = () => (
-  <Layout title="walknote">
+  <Layout title="Sample Doctor Website">
     <Container>
       <Title>
-        Demo Doctor Site <Badge>2022 - Ongoing</Badge>
+        Sample Doctor Site <Badge>2022 - Ongoing</Badge>
       </Title>
       <P>
         This is the example website we included at our first offer as a
