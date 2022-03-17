@@ -1,10 +1,10 @@
-# Takuya's Homepage
+# Kerem's Homepage
 
-[https://www.craftz.dog/](https://www.craftz.dog/)
+This project has been forked from [https://www.craftz.dog/](https://www.craftz.dog/) and updated per my needs as a personal developer website as it was permitted by the owner with the conditions applied.
 
 ## Tutorial
 
-Watch how I built this website on YouTube:
+This is the tutorial I followed to build this. Thanks Takuya for this relaxing project.
 
 [![YouTube thumbnail](./doc/thumb.png)](https://www.youtube.com/watch?v=bSMZgXzC9AA)
 
