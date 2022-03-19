@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import NavBar from '../navbar'
-import { Box, Container } from '@chakra-ui/react'
+import { Box, Container, useColorModeValue } from '@chakra-ui/react'
 import Footer from '../footer'
 import VoxelDogLoader from '../voxel-dog-loader'
 
@@ -36,7 +36,12 @@ const Main = ({ children, router }) => {
 
       <NavBar path={router.asPath} />
 
-      <Container maxW="container.md" pt={14}>
+      <Container
+        maxW="container.md"
+        pt={14}
+        bgPosition="center"
+        bgImage={`/images/hive${useColorModeValue('', '-dark')}.svg`}
+      >
         <LazyVoxelDog />
 
         {children}
