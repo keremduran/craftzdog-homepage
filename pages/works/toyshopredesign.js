@@ -42,7 +42,7 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>HTML, CSS, CSS Grid, Flexbox, Javascript</span>
+          <span>HTML, CSS, CSS Grid, Flexbox, Vue.js</span>
         </ListItem>
       </List>
       <Heading as="h4" fontSize={16} my={6}>
