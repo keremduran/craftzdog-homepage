@@ -20,11 +20,11 @@ const Work = () => (
         InspireDigital <Badge>2022 - ongoing</Badge>
       </Title>
       <P>
-        This is a simple initial landing site for our family business. We aim to
+        This is a simple initial landing site for our family startup. We aim to
         combine content, design, and product development at one source. This
         project is still in development, it will be an addition to my
-        family&apos;s ongoing business providing content to Turkish doctors for
-        more than a decade.
+        family&apos;s ongoing business providing newspaper and social media
+        content to Turkish doctors for more than a decade.
       </P>
       <List ml={4} my={4}>
         <ListItem>
