@@ -62,6 +62,7 @@ const Works = () => (
             Full stack application made via a Next.js tutorial
           </WorkGridItem>
         </Section>
+        {/* [To be fixed]
         <Section delay={0.3}>
           <WorkGridItem
             id="nextpokedex"
@@ -71,7 +72,7 @@ const Works = () => (
           >
             A brief application to test the pokemon api with Next.js
           </WorkGridItem>
-        </Section>
+        </Section> */}
         <Section delay={0.3}>
           <WorkGridItem
             id="reactcalculator"
