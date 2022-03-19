@@ -44,7 +44,8 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Kerem Duran
           </Heading>
-          <p>Software Developer ( Engineer / Developer / Translator)</p>
+          <p>Software Developer (Engineer/Designer/Translator)</p>
+          <p>(he/him/his)</p>
         </Box>
         <Box
           flexShrink={0}
@@ -84,7 +85,7 @@ const Home = () => (
           Community of Turkey), I&apos;ve naturally gravitated towards similar
           sentiments, and helped Refugees and Immigrants to settle in Toronto
           since 2017. Recently, I made the decision to fully transition to
-          Software Engineering, since my heart is in Mathematics and an
+          Software Engineering, since my heart is in Mathematics and
           Engineering. I chose to start with web technologies, because I know
           that it could be a reliable voice for people who have a passion.
           Currently, I&apos;m working to establish our family business,{' '}
@@ -92,7 +93,7 @@ const Home = () => (
             InspireDigital
           </Link>
           , providing primarily Turkish doctors with Full-Stack websites and
-          also content!
+          content!
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works" scroll={false}>
