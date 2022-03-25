@@ -6,7 +6,7 @@ import { WorkGridItem } from '../components/grid-item'
 import thumbDoctorDemo from '../public/images/links/doctordemo.png'
 import thumbRealEstate from '../public/images/links/realestate.png'
 import thumbToyshopRedesign from '../public/images/links/toyshopredesign.png'
-import thumbShoeStore from '../public/images/links/shoestore.png'
+import thumbSneakers from '../public/images/links/sneakers.png'
 import thumbCalculator from '../public/images/links/calculator.png'
 import thumbInspireDigital from '../public/images/links/inspiredigital.png'
 import thumbOddrush from '../public/images/links/oddrush.png'
@@ -63,9 +63,9 @@ const Works = () => (
         </Section>
         <Section>
           <WorkGridItem
-            id="shoestore"
+            id="sneakers"
             title=".SNEAKERS"
-            thumbnail={thumbShoeStore}
+            thumbnail={thumbSneakers}
           >
             Nikes shoe store, made with VanillaJS, SCSS.
           </WorkGridItem>
