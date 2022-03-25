@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Box align="center" opacity={0.4} fontSize="sm">
       &copy; {new Date().getFullYear()} Kerem Duran - All Rights Reserved.
-      Credits to Takuya Matsuyama's{' '}
+      Credits to Takuya Matsuyama&apos;s{' '}
       <Link href="https://github.com/craftzdog/craftzdog-homepage" isExternal>
         template
       </Link>{' '}
