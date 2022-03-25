@@ -6,7 +6,7 @@ import { WorkGridItem } from '../components/grid-item'
 import thumbDoctorDemo from '../public/images/links/doctordemo.png'
 import thumbRealEstate from '../public/images/links/realestate.png'
 import thumbToyshopRedesign from '../public/images/links/toyshopredesign.png'
-import thumbNextPokedex from '../public/images/links/nextpokedex.png'
+import thumbShoeStore from '../public/images/links/shoestore.png'
 import thumbCalculator from '../public/images/links/calculator.png'
 import thumbInspireDigital from '../public/images/links/inspiredigital.png'
 import thumbOddrush from '../public/images/links/oddrush.png'
@@ -43,8 +43,7 @@ const Works = () => (
             title="Toyshop Redesign"
             thumbnail={thumbToyshopRedesign}
           >
-            One of my first complete projects, based on extensive design
-            documentation and wireframes.
+            Based on design docs and wireframes.
           </WorkGridItem>
         </Section>
         <Section delay={0.2}>
@@ -62,17 +61,15 @@ const Works = () => (
             Full stack application made via a Next.js tutorial
           </WorkGridItem>
         </Section>
-        {/* [To be fixed]
-        <Section delay={0.3}>
+        <Section>
           <WorkGridItem
-            id="nextpokedex"
-            title="Pokedex"
-            thumbnail={thumbNextPokedex}
-            externalLink="https://github.com/keremduran/next-pokedex.git"
+            id="shoestore"
+            title=".SNEAKERS"
+            thumbnail={thumbShoeStore}
           >
-            A brief application to test the pokemon api with Next.js
+            Nikes shoe store, made with VanillaJS, SCSS.
           </WorkGridItem>
-        </Section> */}
+        </Section>
         <Section delay={0.3}>
           <WorkGridItem
             id="reactcalculator"

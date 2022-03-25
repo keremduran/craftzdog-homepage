@@ -20,12 +20,12 @@ const Work = () => (
         Sample Doctor Site <Badge>2022 - Ongoing</Badge>
       </Title>
       <P>
-        This is the example website we included at our first offer as a
-        business, which provides a fully loaded landing page with blogging
-        capabilities through DatoCMS. I have designed and developed this website
-        from without a template, using bootstrap and Next.js components. GraphQL
-        was used to connect with the headless cms on page and component level to
-        make the content completely customizable.
+        This is a example website we included at our first offer as a business,
+        which provides a fully loaded landing page with blogging capabilities
+        through DatoCMS. I have designed and developed this website from ground
+        up, using bootstrap and Next.js. GraphQL was used to connect with the
+        headless cms on page and component level to make the content completely
+        customizable. It is fully open source, feel free to use it.
       </P>
       <List ml={4} my={4}>
         <ListItem>

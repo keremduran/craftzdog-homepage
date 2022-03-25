@@ -3,11 +3,11 @@ import dynamic from 'next/dynamic'
 import NavBar from '../navbar'
 import { Box, Container, useColorModeValue } from '@chakra-ui/react'
 import Footer from '../footer'
-import VoxelDogLoader from '../voxel-dog-loader'
+import VoxelBeeLoader from '../voxel-bee-loader'
 
-const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
+const LazyVoxelBee = dynamic(() => import('../voxel-bee'), {
   ssr: false,
-  loading: () => <VoxelDogLoader />
+  loading: () => <VoxelBeeLoader />
 })
 
 const Main = ({ children, router }) => {
@@ -42,7 +42,7 @@ const Main = ({ children, router }) => {
         bgPosition="center"
         bgImage={`/images/hive${useColorModeValue('', '-dark')}.svg`}
       >
-        <LazyVoxelDog />
+        <LazyVoxelBee />
 
         {children}
 
