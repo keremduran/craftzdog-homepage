@@ -19,13 +19,22 @@ const Works = () => (
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <Section delay={0.2}>
+          <WorkGridItem
+            id="realestate"
+            title="Real Estate"
+            thumbnail={thumbRealEstate}
+          >
+            Full stack real-estate application, based in UAE.
+          </WorkGridItem>
+        </Section>
         <Section>
           <WorkGridItem
             id="inspiredigital"
             title="InspireDigital"
             thumbnail={thumbInspireDigital}
           >
-            A simple landing site for our family business.
+            A simple landing site for our startup, selling digital products.
           </WorkGridItem>
         </Section>
         <Section>
@@ -34,7 +43,8 @@ const Works = () => (
             title="Demo Doctor Site"
             thumbnail={thumbDoctorDemo}
           >
-            Demo website we presented to our potential clients.
+            A sample landing page for doctors; presented to our potential
+            clients.
           </WorkGridItem>
         </Section>
         <Section>
@@ -48,17 +58,7 @@ const Works = () => (
         </Section>
         <Section delay={0.2}>
           <WorkGridItem id="oddrush" title="Oddrush" thumbnail={thumbOddrush}>
-            A game I developed during my journey as a casino dealer, for casino
-            dealers.
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.2}>
-          <WorkGridItem
-            id="realestate"
-            title="Real Estate"
-            thumbnail={thumbRealEstate}
-          >
-            Full stack application made via a Next.js tutorial
+            A training game for casino dealers.
           </WorkGridItem>
         </Section>
         <Section>
@@ -77,7 +77,7 @@ const Works = () => (
             thumbnail={thumbCalculator}
             externalLink="https://github.com/keremduran/calculator.git"
           >
-            A calculator application to practice React Basics
+            A calculator application made with React.
           </WorkGridItem>
         </Section>
       </SimpleGrid>
