@@ -88,12 +88,12 @@ const Home = () => (
           Software Engineering, since my heart is in Mathematics and
           Engineering. I chose to start with web technologies, because I know
           that it could be a reliable voice for people who have a passion.
-          Currently, I&apos;m working to establish our family business,{' '}
+          Currently, I&apos;m working at a startup,{' '}
           <Link href="https://inspiredigital.vercel.app/" isExternal>
             InspireDigital
           </Link>
-          , providing primarily Turkish doctors with Full-Stack websites and
-          content!
+          , working primarly with Turkish clients providing Full-Stack websites
+          and content!
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works" scroll={false}>
