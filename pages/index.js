@@ -21,6 +21,8 @@ import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import thumbInspireDigital from '../public/images/links/inspiredigital.png'
 import thumbDoctorDemo from '../public/images/links/doctordemo.png'
 import Image from 'next/image'
+import Skills from '../components/skills'
+import { motion } from 'framer-motion'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -34,18 +36,23 @@ const Home = () => (
         mb={6}
         p={3}
         textAlign="center"
+        letterSpacing={1.06}
+        fontWeight={800}
+        textColor={useColorModeValue('purple.700', 'purple.300')}
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Hello👋, I&apos;m a full-stack developer based in Toronto!
+        Hello👋, I&apos;m a software engineer based in Toronto!
       </Box>
-
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
+          <Heading as="h1" fontSize={'3rem'} variant="page-title">
             Kerem Duran
           </Heading>
-          <p>Software Developer (Engineer/Designer/Translator)</p>
-          <p>(he/him/his)</p>
+          <Heading as="h2" fontSize={'2rem'}>
+            Web Developer
+            <br />
+            Software Engineer
+          </Heading>
         </Box>
         <Box
           flexShrink={0}
@@ -53,57 +60,58 @@ const Home = () => (
           ml={{ md: 6 }}
           textAlign="center"
         >
-          <Box
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            w="100px"
-            h="100px"
-            display="inline-block"
-            borderRadius="full"
-            overflow="hidden"
+          <motion.div
+            initial={{ x: 50 }}
+            animate={{
+              x: [170, 130, 80, 20, -50, -120, -60, 1000, -60, 30, 0],
+              y: [0, 0, 0, 0, 0, 0, 0, 0, 1000, 500, 0]
+            }}
+            transition={{
+              duration: 6,
+              delay: 5
+            }}
           >
-            <ProfileImage
-              src="/images/kerem1.jpg"
-              alt="Profile image"
+            <Box
+              borderColor="whiteAlpha.800"
+              borderWidth={2}
+              borderStyle="solid"
+              w="100px"
+              h="100px"
+              display="inline-block"
               borderRadius="full"
-              width="100%"
-              height="100%"
-            />
-          </Box>
+              overflow="hidden"
+            >
+              <ProfileImage
+                src="/images/kerem1.jpg"
+                alt="Profile image"
+                borderRadius="full"
+                width="100%"
+                height="100%"
+              />
+            </Box>
+          </motion.div>
         </Box>
       </Box>
-
-      <Section delay={0.1}>
+      <Section delay={0.1} my="3">
+        <Skills />
         <Heading as="h3" variant="section-title">
-          About Me
+          My Skills
         </Heading>
         <Paragraph>
-          Welcome to my hive! Thank you for your time and interest in getting to
-          know me. Born into a family of humanitarian activists who were the
-          founding members establishing Lambda Istanbul (former official LGBT
-          Community of Turkey), I&apos;ve naturally gravitated towards similar
-          sentiments, and helped Refugees and Immigrants to settle in Toronto
-          since 2017. Recently, I made the decision to fully transition to
-          Software Engineering, since my heart is in Mathematics and
-          Engineering. I chose to start with web technologies, because I know
-          that it could be a reliable voice for people who have a passion.
-          Currently, I&apos;m working at a startup,{' '}
-          <Link href="https://inspiredigital.vercel.app/" isExternal>
-            InspireDigital
-          </Link>
-          , working primarly with Turkish clients providing Full-Stack websites
-          and content!
+          I specialize in developing responsive, performant, mobile friendly
+          websites from scratch with latest available technology, as well as
+          creating custom themes for Shopify, modifying existing themes, and
+          writing custom code needed to achieve the goals of my clients.{' '}
         </Paragraph>
-        <Box align="center" my={4}>
-          <NextLink href="/works" scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
-              My portfolio
-            </Button>
-          </NextLink>
-        </Box>
       </Section>
 
+      <Box align="center" my={4}>
+        <NextLink href="/works" scroll={false}>
+          <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
+            My portfolio
+          </Button>
+        </NextLink>
+      </Box>
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
           Bio
@@ -132,7 +140,28 @@ const Home = () => (
           Started Software Engineering Technician Program in Centennial College.
         </BioSection>
       </Section>
-
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          My story
+        </Heading>
+        <Paragraph>
+          Welcome to my hive! Thank you for your time and interest in getting to
+          know me. Born into a family of humanitarian activists who were the
+          founding members establishing Lambda Istanbul (former official LGBT
+          Community of Turkey), I&apos;ve naturally gravitated towards similar
+          sentiments, and helped Refugees and Immigrants to settle in Toronto
+          since 2017. Recently, I made the decision to fully transition to
+          Software Engineering, since my heart is in Mathematics and
+          Engineering. I chose to start with web technologies, because I know
+          that it could be a reliable voice for people who have a passion.
+          Currently, I&apos;m working at a startup,{' '}
+          <Link href="https://inspiredigital.vercel.app/" isExternal>
+            InspireDigital
+          </Link>
+          , working primarly with Turkish clients providing Full-Stack websites
+          and content!
+        </Paragraph>
+      </Section>
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           In my free time
@@ -171,20 +200,20 @@ const Home = () => (
                 @kerem-duran
               </Button>
             </Link>
-            <ListItem>
-              <Link
-                href="https://www.linkedin.com/in/kerem-duran/"
-                target="_blank"
+          </ListItem>
+          <ListItem>
+            <Link
+              href="https://www.linkedin.com/in/kerem-duran/"
+              target="_blank"
+            >
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<EmailIcon />}
               >
-                <Button
-                  variant="ghost"
-                  colorScheme="teal"
-                  leftIcon={<EmailIcon />}
-                >
-                  @keremduran@live.com
-                </Button>
-              </Link>
-            </ListItem>
+                @keremduran@live.com
+              </Button>
+            </Link>
           </ListItem>
         </List>
         <Section delay={0.3}>
