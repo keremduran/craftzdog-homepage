@@ -2,11 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
-import { DogSpinner, DogContainer } from './voxel-bee-loader'
-
-function easeOutCirc(x) {
-  return Math.sqrt(1 - Math.pow(x - 1, 4))
-}
+import { BeeSpinner, BeeContainer } from './voxel-bee-loader'
 
 const VoxelDog = () => {
   const refContainer = useRef()
@@ -58,7 +54,6 @@ const VoxelDog = () => {
       renderer.outputEncoding = THREE.sRGBEncoding
       container.appendChild(renderer.domElement)
       setRenderer(renderer)
-      console.log(scH + ' | ' + scW)
       // 640 -> 240
       // 8   -> 6
       const scale = scW * 0.02 + 4.8
@@ -74,8 +69,6 @@ const VoxelDog = () => {
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
       setCamera(camera)
-      console.log(scale)
-      console.log(camera)
       const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
       scene.add(ambientLight)
 
@@ -98,26 +91,12 @@ const VoxelDog = () => {
         req = requestAnimationFrame(animate)
 
         frame = frame <= 100 ? frame + 1 : frame
-
-        if (frame <= 100) {
-          const p = initialCameraPosition
-          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
-
-          camera.position.y = 10
-          camera.position.x =
-            p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
-          camera.position.z =
-            p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
-          camera.lookAt(target)
-        } else {
-          controls.update()
-        }
+        controls.update()
 
         renderer.render(scene, camera)
       }
 
       return () => {
-        console.log('unmount')
         cancelAnimationFrame(req)
         renderer.dispose()
       }
@@ -132,7 +111,7 @@ const VoxelDog = () => {
   }, [renderer, handleWindowResize])
 
   return (
-    <DogContainer ref={refContainer}>{loading && <DogSpinner />}</DogContainer>
+    <BeeContainer ref={refContainer}>{loading && <BeeSpinner />}</BeeContainer>
   )
 }
 
