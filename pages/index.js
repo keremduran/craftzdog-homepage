@@ -29,7 +29,7 @@ const ProfileImage = chakra(Image, {
 
 const Home = () => (
   <Layout>
-    <Container overflowX="hidden">
+    <Container>
       <Box
         borderRadius="lg"
         mb={6}
@@ -79,8 +79,16 @@ const Home = () => (
           </Box>
         </Box>
       </Box>
+
       <Section delay={0.3} my="3">
         <Skills />
+        <Box align="center" mt={6} mb={3}>
+          <NextLink href="/works" scroll={false}>
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
+              My portfolio
+            </Button>
+          </NextLink>
+        </Box>
         <Heading as="h3" variant="section-title">
           My Skills
         </Heading>
@@ -91,14 +99,6 @@ const Home = () => (
           writing custom code needed to achieve the goals of my clients.{' '}
         </Paragraph>
       </Section>
-
-      <Box align="center" my={4}>
-        <NextLink href="/works" scroll={false}>
-          <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
-            My portfolio
-          </Button>
-        </NextLink>
-      </Box>
       <Section delay={0.7}>
         <Heading as="h3" variant="section-title">
           Bio

@@ -38,7 +38,7 @@ const Main = ({ children, router }) => {
 
       <Container
         maxW="container.lg"
-        pt={14}
+        pt={[10, 14, 16]}
         bgPosition="center"
         bgImage={`/images/hive${useColorModeValue('', '-dark')}.svg`}
       >

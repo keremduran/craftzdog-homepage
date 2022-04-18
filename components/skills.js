@@ -2,20 +2,19 @@ import { LazyMotion, domAnimation, m } from 'framer-motion'
 import {
   chakra,
   shouldForwardProp,
-  Flex,
-  Heading,
+  Wrap,
   useColorModeValue
 } from '@chakra-ui/react'
 
 const SkillsList = [
-  { title: 'HTML5/CSS3', url: '' },
+  { title: 'HTML/CSS', url: '' },
   { title: 'Javascript', url: '' },
   { title: 'React', url: '' },
   { title: 'Shopify', url: '' },
   { title: 'and more!', url: '' }
 ]
 
-const StyledDiv = chakra(m.div, {
+const StyledList = chakra(m.li, {
   shouldForwardProp: prop => {
     return shouldForwardProp(prop) || prop === 'transition'
   }
@@ -24,16 +23,17 @@ const StyledDiv = chakra(m.div, {
 const Skills = () => {
   const textColor = useColorModeValue('teal.500', 'teal.200')
   return (
-    <Flex
-      fontWeight={700}
-      my={6}
+    <Wrap
+      my={3}
       h={10}
-      fontSize={'1.2rem'}
+      fontWeight={600}
+      fontSize={['0.9rem', '1rem', '1.2rem']}
       textColor={textColor}
+      spacingX={['0.9rem', '1.2rem', '1.5rem']}
     >
       <LazyMotion features={domAnimation}>
         {SkillsList.map((skill, index) => (
-          <StyledDiv
+          <StyledList
             initial={{ y: 10, opacity: 1 }}
             animate={{
               y: [0, 10, 0],
@@ -45,16 +45,14 @@ const Skills = () => {
               duration: 1.2,
               delay: index * 0.2
             }}
+            my={3}
             key={`skill-${index}`}
-            mr={4}
           >
-            <Heading as="h3" fontWeight={800} fontSize={'1rem'}>
-              {skill.title}
-            </Heading>
-          </StyledDiv>
+            {skill.title}
+          </StyledList>
         ))}
       </LazyMotion>
-    </Flex>
+    </Wrap>
   )
 }
 
