@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "keywords": [],
-  "author": "Takuya Matsuyama",
+  "author": "Kerem Duran",
   "license": "MIT",
   "dependencies": {
     "@chakra-ui/icons": "^1.1.1",
