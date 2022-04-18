@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { LazyMotion, domAnimation, m } from 'framer-motion'
 import {
   chakra,
   shouldForwardProp,
@@ -15,7 +15,7 @@ const SkillsList = [
   { title: 'and more!', url: '' }
 ]
 
-const StyledDiv = chakra(motion.div, {
+const StyledDiv = chakra(m.div, {
   shouldForwardProp: prop => {
     return shouldForwardProp(prop) || prop === 'transition'
   }
@@ -31,24 +31,29 @@ const Skills = () => {
       fontSize={'1.2rem'}
       textColor={textColor}
     >
-      {SkillsList.map((skill, index) => (
-        <StyledDiv
-          initial={{ y: 10, opacity: 0 }}
-          animate={{ y: [0, 10, 0], opacity: [1, 0, 1], scale: [1.1, 1, 1.1] }}
-          transition={{
-            repeat: Infinity,
-            repeatDelay: 12,
-            duration: 1.2,
-            delay: index
-          }}
-          key={`skill-${index}`}
-          mr={4}
-        >
-          <Heading as="h3" fontWeight={800} fontSize={'1rem'}>
-            {skill.title}
-          </Heading>
-        </StyledDiv>
-      ))}
+      <LazyMotion features={domAnimation}>
+        {SkillsList.map((skill, index) => (
+          <StyledDiv
+            initial={{ y: 10, opacity: 1 }}
+            animate={{
+              y: [0, 10, 0],
+              opacity: [1, 0, 1]
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatDelay: 12,
+              duration: 1.2,
+              delay: index * 0.2
+            }}
+            key={`skill-${index}`}
+            mr={4}
+          >
+            <Heading as="h3" fontWeight={800} fontSize={'1rem'}>
+              {skill.title}
+            </Heading>
+          </StyledDiv>
+        ))}
+      </LazyMotion>
     </Flex>
   )
 }
