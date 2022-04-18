@@ -7,7 +7,6 @@ import thumbDoctorDemo from '../public/images/links/doctordemo.png'
 import thumbRealEstate from '../public/images/links/realestate.png'
 import thumbToyshopRedesign from '../public/images/links/toyshopredesign.png'
 import thumbSneakers from '../public/images/links/sneakers.png'
-import thumbCalculator from '../public/images/links/calculator.png'
 import thumbInspireDigital from '../public/images/links/inspiredigital.png'
 import thumbOddrush from '../public/images/links/oddrush.png'
 
@@ -34,7 +33,7 @@ const Works = () => (
             title="InspireDigital"
             thumbnail={thumbInspireDigital}
           >
-            A simple landing site for our startup, selling digital products.
+            A simple landing site for our digital products company.
           </WorkGridItem>
         </Section>
         <Section>
@@ -68,16 +67,6 @@ const Works = () => (
             thumbnail={thumbSneakers}
           >
             Nikes shoe store, made with VanillaJS, SCSS.
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.3}>
-          <WorkGridItem
-            id="reactcalculator"
-            title="Calculator"
-            thumbnail={thumbCalculator}
-            externalLink="https://github.com/keremduran/calculator.git"
-          >
-            A calculator application made with React.
           </WorkGridItem>
         </Section>
       </SimpleGrid>
