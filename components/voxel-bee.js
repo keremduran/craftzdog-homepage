@@ -4,19 +4,12 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
 import { BeeSpinner, BeeContainer } from './voxel-bee-loader'
 
-const VoxelDog = () => {
+const VoxelBee = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
   const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
-  // const [initialCameraPosition] = useState(
-  //   new THREE.Vector3(
-  //     40 * Math.sin(0.2 * Math.PI),
-  //     20,
-  //     40 * Math.cos(0.2 * Math.PI)
-  //   )
-  // )
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
       40 * Math.sin(0.2 * Math.PI),
@@ -77,13 +70,17 @@ const VoxelDog = () => {
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, '/bee.glb', {
-        receiveShadow: false,
-        castShadow: false
-      }).then(() => {
-        animate()
-        setLoading(false)
-      })
+      const loadModel = () => {
+        loadGLTFModel(scene, '/bee.glb', {
+          receiveShadow: false,
+          castShadow: false
+        }).then(() => {
+          animate()
+          setLoading(false)
+        })
+      }
+
+      setTimeout(() => loadModel(), 2000)
 
       let req = null
       let frame = 0
@@ -115,4 +112,4 @@ const VoxelDog = () => {
   )
 }
 
-export default VoxelDog
+export default VoxelBee
