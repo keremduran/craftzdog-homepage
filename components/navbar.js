@@ -72,11 +72,11 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            Works
+            Portfolio
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/keremduran/keremduran-homepage.git"
+            href="https://github.com/keremduran"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -84,7 +84,7 @@ const Navbar = props => {
             pl={2}
           >
             <IoLogoGithub />
-            Source
+            Github
           </LinkItem>
         </Stack>
 
