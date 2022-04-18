@@ -16,7 +16,6 @@ const Works = () => (
       <Heading as="h3" fontSize={20} mb={4}>
         Works
       </Heading>
-
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.2}>
           <WorkGridItem
@@ -27,7 +26,7 @@ const Works = () => (
             Full stack real-estate application, based in UAE.
           </WorkGridItem>
         </Section>
-        <Section>
+        <Section delay={0.4}>
           <WorkGridItem
             id="inspiredigital"
             title="InspireDigital"
@@ -36,7 +35,7 @@ const Works = () => (
             A simple landing site for our digital products company.
           </WorkGridItem>
         </Section>
-        <Section>
+        <Section delay={0.6}>
           <WorkGridItem
             id="doctordemo"
             title="Demo Doctor Site"
@@ -46,7 +45,7 @@ const Works = () => (
             clients.
           </WorkGridItem>
         </Section>
-        <Section>
+        <Section delay={0.8}>
           <WorkGridItem
             id="toyshopredesign"
             title="Toyshop Redesign"
@@ -55,12 +54,12 @@ const Works = () => (
             Based on design docs and wireframes.
           </WorkGridItem>
         </Section>
-        <Section delay={0.2}>
+        <Section delay={1}>
           <WorkGridItem id="oddrush" title="Oddrush" thumbnail={thumbOddrush}>
             A training game for casino dealers.
           </WorkGridItem>
         </Section>
-        <Section>
+        <Section delay={1.2}>
           <WorkGridItem
             id="sneakers"
             title=".SNEAKERS"
