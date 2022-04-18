@@ -22,7 +22,6 @@ import thumbInspireDigital from '../public/images/links/inspiredigital.png'
 import thumbDoctorDemo from '../public/images/links/doctordemo.png'
 import Image from 'next/image'
 import Skills from '../components/skills'
-import { motion } from 'framer-motion'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -30,7 +29,7 @@ const ProfileImage = chakra(Image, {
 
 const Home = () => (
   <Layout>
-    <Container>
+    <Container overflowX="hidden">
       <Box
         borderRadius="lg"
         mb={6}
@@ -60,39 +59,27 @@ const Home = () => (
           ml={{ md: 6 }}
           textAlign="center"
         >
-          <motion.div
-            initial={{ x: 50 }}
-            animate={{
-              x: [170, 130, 80, 20, -50, -120, -60, 1000, -60, 30, 0],
-              y: [0, 0, 0, 0, 0, 0, 0, 0, 1000, 500, 0]
-            }}
-            transition={{
-              duration: 6,
-              delay: 5
-            }}
+          <Box
+            borderColor="whiteAlpha.800"
+            borderWidth={2}
+            borderStyle="solid"
+            w="100px"
+            h="100px"
+            display="inline-block"
+            borderRadius="full"
+            overflow="hidden"
           >
-            <Box
-              borderColor="whiteAlpha.800"
-              borderWidth={2}
-              borderStyle="solid"
-              w="100px"
-              h="100px"
-              display="inline-block"
+            <ProfileImage
+              src="/images/kerem1.jpg"
+              alt="Profile image"
               borderRadius="full"
-              overflow="hidden"
-            >
-              <ProfileImage
-                src="/images/kerem1.jpg"
-                alt="Profile image"
-                borderRadius="full"
-                width="100%"
-                height="100%"
-              />
-            </Box>
-          </motion.div>
+              width="100%"
+              height="100%"
+            />
+          </Box>
         </Box>
       </Box>
-      <Section delay={0.1} my="3">
+      <Section delay={0.3} my="3">
         <Skills />
         <Heading as="h3" variant="section-title">
           My Skills
@@ -112,7 +99,7 @@ const Home = () => (
           </Button>
         </NextLink>
       </Box>
-      <Section delay={0.2}>
+      <Section delay={0.7}>
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
@@ -140,7 +127,7 @@ const Home = () => (
           Started Software Engineering Technician Program in Centennial College.
         </BioSection>
       </Section>
-      <Section delay={0.1}>
+      <Section delay={1}>
         <Heading as="h3" variant="section-title">
           My story
         </Heading>
@@ -162,7 +149,7 @@ const Home = () => (
           and content!
         </Paragraph>
       </Section>
-      <Section delay={0.3}>
+      <Section delay={1.3}>
         <Heading as="h3" variant="section-title">
           In my free time
         </Heading>
@@ -170,8 +157,7 @@ const Home = () => (
           Traveller, Kickboxer, Music Maker, Zen Practitioner
         </Paragraph>
       </Section>
-
-      <Section delay={0.3}>
+      <Section delay={1.6}>
         <Heading as="h3" variant="section-title">
           You can find me at
         </Heading>

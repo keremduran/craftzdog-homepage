@@ -4,7 +4,6 @@ import NavBar from '../navbar'
 import { Box, Container, useColorModeValue } from '@chakra-ui/react'
 import Footer from '../footer'
 import VoxelBeeLoader from '../voxel-bee-loader'
-import Section from '../../components/section'
 
 const LazyVoxelBee = dynamic(() => import('../voxel-bee'), {
   ssr: false,
@@ -43,9 +42,8 @@ const Main = ({ children, router }) => {
         bgPosition="center"
         bgImage={`/images/hive${useColorModeValue('', '-dark')}.svg`}
       >
-        <Section delay={1}>
-          <LazyVoxelBee />
-        </Section>
+        <LazyVoxelBee />
+
         {children}
 
         <Footer />
