@@ -29,7 +29,7 @@ const Skills = () => {
       fontWeight={600}
       fontSize={['0.9rem', '1rem', '1.2rem']}
       textColor={textColor}
-      spacingX={['0.9rem', '1.2rem', '1.5rem']}
+      spacingx={['0.9rem', '1.2rem', '1.5rem']}
     >
       <LazyMotion features={domAnimation}>
         {SkillsList.map((skill, index) => (
