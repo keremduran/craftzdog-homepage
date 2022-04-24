@@ -15,13 +15,17 @@ import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
-import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import thumbInspireDigital from '../public/images/links/inspiredigital.png'
 import thumbDoctorDemo from '../public/images/links/doctordemo.png'
 import Image from 'next/image'
-import Skills from '../components/skills'
+//import Skills from '../components/skills'
+import dynamic from 'next/dynamic'
+import Section from '../components/section'
+const Skills = dynamic(() => import('../components/skills'), {
+  loading: () => <div>Loading...</div>
+})
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -79,7 +83,6 @@ const Home = () => (
           </Box>
         </Box>
       </Box>
-
       <Section delay={0.3} my="3">
         <Skills />
         <Box align="center" mt={6} mb={3}>
@@ -114,17 +117,21 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>Jun, 2016</BioYear>
-          Worked as a Web Developer Intern at Doktorsitesi.com in Turkey,
-          Istanbul (Platform for Turkish Doctors)
+          First Web Developer job, at Doktorsitesi.com in Turkey, Istanbul
+          (Platform for Turkish Doctors)
         </BioSection>
         <BioSection>
           <BioYear>Aug, 2017</BioYear>
-          Arrived at Toronto, and began my work with Refugees and Immigrants the
-          same day.
+          Arrived at Toronto, and began my work as a layout developer /
+          translator in law industry.
         </BioSection>
         <BioSection>
           <BioYear>Sep, 2019</BioYear>
           Started Software Engineering Technician Program in Centennial College.
+        </BioSection>
+        <BioSection>
+          <BioYear>Dec, 2021</BioYear>
+          Started as a Web Developer at Inspire Digital.
         </BioSection>
       </Section>
       <Section delay={1}>
@@ -132,16 +139,17 @@ const Home = () => (
           My story
         </Heading>
         <Paragraph>
-          Welcome to my hive! Thank you for your time and interest in getting to
-          know me. Born into a family of humanitarian activists who were the
-          founding members establishing Lambda Istanbul (former official LGBT
-          Community of Turkey), I&apos;ve naturally gravitated towards similar
-          sentiments, and helped Refugees and Immigrants to settle in Toronto
-          since 2017. Recently, I made the decision to fully transition to
-          Software Engineering, since my heart is in Mathematics and
-          Engineering. I chose to start with web technologies, because I know
-          that it could be a reliable voice for people who have a passion.
-          Currently, I&apos;m working at a startup,{' '}
+          Welcome to the hive! Thank you for your time and interest in getting
+          to know me. I have begun my Software Engineering journey in 2013, at
+          one of the most esteemed universities of Turkey, Istanbul Technical
+          University (Mathematical Engineering program). Born into a family of
+          humanitarian activists who were the founding members establishing
+          Lambda Istanbul (former official LGBT Community of Turkey), I&apos;ve
+          naturally gravitated towards similar sentiments, and worked as a
+          programmer/translator with lawyers, automating and digitalizing the
+          process of case preparation regarding Refugees and Immigrants in
+          Toronto between August, 2017 and April, 2022. Currently, I&apos;m
+          working at a startup,{' '}
           <Link href="https://inspiredigital.vercel.app/" isExternal>
             InspireDigital
           </Link>
