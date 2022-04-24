@@ -4,33 +4,41 @@ import {
   Container,
   Heading,
   Box,
-  SimpleGrid,
   Button,
-  List,
-  ListItem,
   useColorModeValue
 } from '@chakra-ui/react'
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
-import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
-//import { BioItem, BioYear } from '../components/bio'
-import { GridItem } from '../components/grid-item'
-//import BioSection from '../components/bio-section'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
 import Layout from '../components/layouts/article'
 
-import thumbInspireDigital from '../public/images/links/inspiredigital.png'
-import thumbDoctorDemo from '../public/images/links/doctordemo.png'
 //import Skills from '../components/skills'
 const Skills = dynamic(() => import('../components/skills'), {
   loading: () => <div>Loading...</div>
 })
-const BioSection = dynamic(() => import('../components/bio-section'), {
-  loading: () => <div>Loading...</div>
-})
+const BioSection = dynamic(
+  () => import('../components/index-sections/bio-section'),
+  {
+    loading: () => <div>Loading...</div>
+  }
+)
+
+const FindMeSection = dynamic(
+  () => import('../components/index-sections/find-me'),
+  {
+    loading: () => <div>Loading...</div>
+  }
+)
+
+const RecentWorkSection = dynamic(
+  () => import('../components/index-sections/recent-work'),
+  {
+    loading: () => <div>Loading...</div>
+  }
+)
 
 const Home = () => (
   <Layout>
@@ -149,69 +157,13 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           You can find me at
         </Heading>
-        <List>
-          <ListItem>
-            <Link href="https://github.com/keremduran" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoGithub />}
-              >
-                @keremduran
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="https://www.linkedin.com/in/kerem-duran/"
-              target="_blank"
-            >
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoLinkedin />}
-              >
-                @kerem-duran
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              href="https://www.linkedin.com/in/kerem-duran/"
-              target="_blank"
-            >
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<EmailIcon />}
-              >
-                @keremduran@live.com
-              </Button>
-            </Link>
-          </ListItem>
-        </List>
-        <Section delay={0.3}>
-          <Heading as="h3" variant="section-title">
-            Some recent work
-          </Heading>
-          <SimpleGrid columns={[1, 2, 2]} gap={6}>
-            <GridItem
-              href="https://inspiredigital.vercel.app/"
-              title="Inspire Digital"
-              thumbnail={thumbInspireDigital}
-            >
-              A simple landing site for our family business.
-            </GridItem>
-            <GridItem
-              href="https://doktorwebsite-demo-next.vercel.app/"
-              title="Doctor Landing & Blog"
-              height={20}
-              thumbnail={thumbDoctorDemo}
-            >
-              A demo website for doctors, comes with dato CMS.
-            </GridItem>
-          </SimpleGrid>
-        </Section>
+        <FindMeSection />
+      </Section>
+      <Section delay={1.9}>
+        <Heading as="h3" variant="section-title">
+          Some recent work
+        </Heading>
+        <RecentWorkSection />
       </Section>
     </Container>
   </Layout>
