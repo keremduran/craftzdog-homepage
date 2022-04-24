@@ -8,27 +8,28 @@ import {
   Button,
   List,
   ListItem,
-  useColorModeValue,
-  chakra
+  useColorModeValue
 } from '@chakra-ui/react'
-import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
-import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
-import Layout from '../components/layouts/article'
-import { GridItem } from '../components/grid-item'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
+import Image from 'next/image'
+import dynamic from 'next/dynamic'
+import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
+
+//import { BioItem, BioYear } from '../components/bio'
+import { GridItem } from '../components/grid-item'
+//import BioSection from '../components/bio-section'
+import Paragraph from '../components/paragraph'
+import Section from '../components/section'
+import Layout from '../components/layouts/article'
+
 import thumbInspireDigital from '../public/images/links/inspiredigital.png'
 import thumbDoctorDemo from '../public/images/links/doctordemo.png'
-import Image from 'next/image'
 //import Skills from '../components/skills'
-import dynamic from 'next/dynamic'
-import Section from '../components/section'
 const Skills = dynamic(() => import('../components/skills'), {
   loading: () => <div>Loading...</div>
 })
-
-const ProfileImage = chakra(Image, {
-  shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
+const BioSection = dynamic(() => import('../components/bio-section'), {
+  loading: () => <div>Loading...</div>
 })
 
 const Home = () => (
@@ -73,7 +74,7 @@ const Home = () => (
             borderRadius="full"
             overflow="hidden"
           >
-            <ProfileImage
+            <Image
               src="/images/kerem1.jpg"
               alt="Profile image"
               borderRadius="full"
@@ -106,55 +107,34 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
-        <BioSection>
-          <BioYear>Jun, 1994</BioYear>
-          Born in Istanbul, Turkey.
-        </BioSection>
-        <BioSection>
-          <BioYear>Sep, 2013</BioYear>
-          Started Mathematical Engineering Program in Istanbul Technical
-          University
-        </BioSection>
-        <BioSection>
-          <BioYear>Jun, 2016</BioYear>
-          First Web Developer job, at Doktorsitesi.com in Turkey, Istanbul
-          (Platform for Turkish Doctors)
-        </BioSection>
-        <BioSection>
-          <BioYear>Aug, 2017</BioYear>
-          Arrived at Toronto, and began my work as a layout developer /
-          translator in law industry.
-        </BioSection>
-        <BioSection>
-          <BioYear>Sep, 2019</BioYear>
-          Started Software Engineering Technician Program in Centennial College.
-        </BioSection>
-        <BioSection>
-          <BioYear>Dec, 2021</BioYear>
-          Started as a Web Developer at Inspire Digital.
-        </BioSection>
+        <BioSection />
       </Section>
       <Section delay={1}>
         <Heading as="h3" variant="section-title">
           My story
         </Heading>
         <Paragraph>
-          Welcome to the hive! Thank you for your time and interest in getting
-          to know me. I have begun my Software Engineering journey in 2013, at
-          one of the most esteemed universities of Turkey, Istanbul Technical
-          University (Mathematical Engineering program). Born into a family of
-          humanitarian activists who were the founding members establishing
-          Lambda Istanbul (former official LGBT Community of Turkey), I&apos;ve
-          naturally gravitated towards similar sentiments, and worked as a
-          programmer/translator with lawyers, automating and digitalizing the
-          process of case preparation regarding Refugees and Immigrants in
-          Toronto between August, 2017 and April, 2022. Currently, I&apos;m
-          working at a startup,{' '}
+          Welcome to the hive, and thank you for your time and interest in
+          getting to know me. I have begun my Software Engineering journey in
+          2013, at one of the most esteemed universities of Turkey, Istanbul
+          Technical University (Mathematical Engineering program).
+        </Paragraph>
+        <Paragraph>
+          Born into a family of humanitarian activists who were the founding
+          members establishing Lambda Istanbul (former official LGBT Community
+          of Turkey), I&apos;ve naturally gravitated towards similar sentiments,
+          and worked as a programmer/translator with Canadian lawyers,
+          automating and digitalizing the process of case preparation regarding
+          Refugees and Immigrants in Toronto between August, 2017 and April,
+          2022.
+        </Paragraph>
+        <Paragraph>
+          Currently, I&apos;m working at a startup,{' '}
           <Link href="https://inspiredigital.vercel.app/" isExternal>
             InspireDigital
           </Link>
           , working primarly with Turkish clients providing Full-Stack websites
-          and content!
+          and content! Looking forward to working with you!
         </Paragraph>
       </Section>
       <Section delay={1.3}>
